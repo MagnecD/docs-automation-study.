@@ -1,0 +1,10 @@
+@startuml
+actor Студент
+participant "GitHub Repository" as Repo
+participant "GitHub Pages" as Pages
+Студент -> Repo: Создаёт или редактирует .md файл
+Студент -> Repo: Выполняет Commit
+Repo -> Pages: Передаёт изменения
+Pages -> Pages: Автоматическая сборка сайта
+Pages --> Студент: Публикует сайт и выдаёт ссылку
+@enduml
